@@ -3,7 +3,6 @@ name: deploy-hackernews-app-heroku                       # 1
 on:
   push:
     branches:                                            # 2
-      - master
       - main
 
 jobs:  
