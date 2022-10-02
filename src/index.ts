@@ -1,14 +1,19 @@
 import { ApolloServer } from "apollo-server";
-import { context } from "./context"; 
+import { ApolloServerPluginLandingPageLocalDefault } from "apollo-server-core";
 
-// 1
+
+import { context } from "./context"; 
 import { schema } from "./schema";
+
+
 export const server = new ApolloServer({
     schema,
     context,
+    introspection: true,                                      // 1
+    plugins: [ApolloServerPluginLandingPageLocalDefault()],   // 2
 });
 
-const port = 3000;
+const port = process.env.PORT || 3000;                        // 3
 // 2
 server.listen({port}).then(({ url }) => {
     console.log(`🚀  Server ready at ${url}`);

@@ -7,12 +7,12 @@ To get started, clone the repository and install the dependencies:
 ```bash
 git clone
 cd hackernews-typescript
-yarn
+npm install
 ```
 
 Then, start the development server:
 
 ```bash
-yarn start
+npm run dev
 ```
 
