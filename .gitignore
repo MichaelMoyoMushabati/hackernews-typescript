@@ -3,4 +3,5 @@ node_modules
 node_modules
 .env
 .vscode
-dist
+distnode_modules
+/lib
